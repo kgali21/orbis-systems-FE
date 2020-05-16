@@ -1,7 +1,9 @@
 import React from 'react';
+import Symbols from './Components/Symbols';
+import data from './services/fakeData';
 
 function App() {
-  return <p>Hello World</p>;
+  return <Symbols data={data}/>;
 }
 
 export default App;

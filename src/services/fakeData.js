@@ -1,4 +1,4 @@
-const fakeData= {
+const fakeData= [{
     response: {
       status: 200
     },
@@ -101,5 +101,5 @@ const fakeData= {
       }
     ]
   }
-  
+  ]
   export default fakeData;

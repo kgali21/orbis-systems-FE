@@ -1,5 +1,5 @@
 import React from 'react';
-import Proptypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const Symbol = ({ symbol, tweet, tweetCount}) => (
     <div>
@@ -10,9 +10,9 @@ const Symbol = ({ symbol, tweet, tweetCount}) => (
 );
 
 Symbol.propTypes = {
-    symbol: Proptypes.string.isRequired,
-    tweet: Proptypes.string.isRequired,
-    tweetCount: Proptypes.string.isRequired,
+    symbol: PropTypes.string.isRequired,
+    tweet: PropTypes.string.isRequired,
+    tweetCount: PropTypes.number.isRequired
 };
 
 export default Symbol
