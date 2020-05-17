@@ -1,9 +1,8 @@
 import React from 'react';
-import Symbols from './Components/Symbols';
-import data from './services/fakeData';
-
+// import Symbols from './Components/Symbols';
 function App() {
-  return <Symbols data={data}/>;
+  return <p>hello world</p>
+  // <Symbols/>;
 }
 
 export default App;
