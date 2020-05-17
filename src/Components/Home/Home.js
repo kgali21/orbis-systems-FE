@@ -1,11 +1,9 @@
 import React from 'react';
-import SymbolRequestForm from '../SymbolRequestForm/SymbolRequestForm';
-import Symbols from '../SymbolDisplay/Symbols';
+import SymbolContainer from '../../container/SymbolContainer';
 
 const Home = () => (
     <>
-    <SymbolRequestForm />
-    <Symbols />
+        <SymbolContainer />
     </>
 )
 

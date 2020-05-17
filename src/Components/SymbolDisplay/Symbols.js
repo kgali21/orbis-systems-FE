@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import SymbolCard from './SymbolCard';
 
 const Symbols = ({ data }) => {
+    console.log(data, 'data')
     const dataElements = data.map((symbol, i) => (
         <li key={i}>
             <SymbolCard {...symbol} />
