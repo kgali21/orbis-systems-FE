@@ -9,7 +9,7 @@ const SymbolRequestForm = () => {
 
     const handleSubmit = event => {
         event.preventDefault();
-        dispatch(addSymbol({ symbol }))
+        dispatch(addSymbol(symbol))
     }
 
 
