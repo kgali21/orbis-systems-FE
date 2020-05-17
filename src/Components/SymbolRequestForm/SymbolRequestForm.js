@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
-// import { useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { addSymbol } from '../../actions/symbolActions';
 
 const SymbolRequestForm = () => {
-    // const dispatch = useDispatch();
+    const dispatch = useDispatch();
 
     const [symbol, setSymbol] = useState('');
 
     const handleSubmit = event => {
         event.preventDefault();
+        dispatch(addSymbol({ symbol }))
     }
 
 
