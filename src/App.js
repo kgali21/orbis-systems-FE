@@ -1,8 +1,13 @@
 import React from 'react';
-// import Symbols from './Components/Symbols';
+import SymbolRequestForm from './Components/SymbolRequestForm/SymbolRequestForm'
+
 function App() {
-  return <p>hello world</p>
-  // <Symbols/>;
+  return (
+    <>
+  <SymbolRequestForm />
+  <p>hello world</p>
+    </>
+  )
 }
 
 export default App;
