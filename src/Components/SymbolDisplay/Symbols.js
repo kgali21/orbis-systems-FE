@@ -1,18 +1,8 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React from 'react';
 import PropTypes from 'prop-types';
 import SymbolCard from './SymbolCard';
 
 const Symbols = ({ data }) => {
-
-    
-
-
-
-
-
-
-
     const dataElements = data.map((symbol, i) => (
         <li key={i}>
             <SymbolCard {...symbol} />
@@ -20,7 +10,9 @@ const Symbols = ({ data }) => {
     ))
 
     return (
-    <ul>{dataElements}</ul>
+    <ul>
+        {dataElements}
+    </ul>
     )
 }
 

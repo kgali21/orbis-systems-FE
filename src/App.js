@@ -1,11 +1,10 @@
 import React from 'react';
-import SymbolRequestForm from './Components/SymbolRequestForm/SymbolRequestForm'
+import Home from './Components/Home/Home';
 
 function App() {
   return (
     <>
-  <SymbolRequestForm />
-  <p>hello world</p>
+      <Home />
     </>
   )
 }

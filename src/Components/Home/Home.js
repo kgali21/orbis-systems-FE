@@ -8,3 +8,5 @@ const Home = () => (
     <Symbols />
     </>
 )
+
+export default Home;
