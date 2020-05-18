@@ -4,7 +4,6 @@ import { useSelector } from 'react-redux';
 import { getSymbolObject } from '../../selectors/symbolsSelectors';
 
 const Symbols = () => {
-    // const dispatch = useDispatch();
 
     const symbols = useSelector(getSymbolObject)
     
