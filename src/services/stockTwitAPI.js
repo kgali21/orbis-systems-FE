@@ -2,9 +2,8 @@
 export const fetchSymbol = symbol => {
     return fetch(`http://localhost:7890/api/2/streams/symbol/${symbol}`)
         .then(res => res.json())
-        .then(({ data }) => ({
+        .then(data => ({
             symbol: data.symbol,
-            tweets: data.messages[0],
-            tweetCount: data.messages
+            tweets: data
         }))
 };

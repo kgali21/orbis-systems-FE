@@ -10,3 +10,9 @@ export const addSymbol = (symbol) => dispatch => {
             });
         });
 };
+
+export const REMOVE_SYMBOL = 'REMOVE_SYMBOL';
+export const removeSymbol = index => ({
+    type: REMOVE_SYMBOL,
+    payload: index
+})
