@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addSymbol } from '../../actions/symbolActions';
-import Symbols from '../SymbolDisplay/Symbols';
 
 const SymbolRequestForm = () => {
     const dispatch = useDispatch();
-    const [symbol, setSymbol] = useState('');
+    const [symbol, setSymbol] = useState([]);
 
 const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(addSymbol({ symbol, tweet, tweetsCount }))
-    console.log('symbol')
+    dispatch(addSymbol(symbol))
+    console.log(symbol, 'symbol')
 }
 
     return (

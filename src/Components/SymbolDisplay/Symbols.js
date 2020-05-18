@@ -1,17 +1,25 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import SymbolCard from './SymbolCard';
-import { useSelector, useDispatch } from 'react-redux';
-import { getSymbols } from '../../selectors/symbolsSelectors';
+import { useSelector } from 'react-redux';
+import { getSymbolObject, getSymbol
+    // , getNewestTweet, getNumberOfTweets 
+} from '../../selectors/symbolsSelectors';
 
 const Symbols = () => {
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
 
-    const symbols = useSelector(getSymbols)
+    // const [symbol, setSymbol] = useState('');
+    // const [tweet, setTweet] = useState('');
+    // const [tweetCount, setTweetCount] = useState(0);
 
-    const dataElements = symbols.map((symbol, i) => (
+    const symbols = useSelector(getSymbolObject)
+    const symbolSel = useSelector(getSymbol)
+    // const tweetSel = useSelector(getNewestTweet)
+    // const tweetCountSel = useSelector(getNumberOfTweets)
+    
+    const dataElements = symbols.map((_, i) => (
         <li key={i}>
-            <SymbolCard {...symbol} />
+            <SymbolCard symbol={symbolSel} />
         </li>
     ))
 
@@ -21,13 +29,5 @@ const Symbols = () => {
     </ul>
     )
 }
-
-Symbols.propTypes = {
-    data: PropTypes.arrayOf(PropTypes.shape({
-        symbol: PropTypes.string.isRequired,
-        tweet: PropTypes.string.isRequired,
-        tweetCount: PropTypes.number.isRequired,
-    })).isRequired
-};
 
 export default Symbols;
