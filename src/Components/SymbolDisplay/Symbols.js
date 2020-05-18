@@ -12,7 +12,7 @@ const Symbols = () => {
     const tweetSel = useSelector(getNewestTweet)
     const tweetCountSel = useSelector(getNumberOfTweets)
     
-    const dataElements = symbols.map((data, i) => (
+    const dataElements = symbols.map((_, i) => (
         <li key={i}>
             <SymbolCard  symbol={symbolSel} tweet={tweetSel} tweetCount={tweetCountSel}/>
         </li>
