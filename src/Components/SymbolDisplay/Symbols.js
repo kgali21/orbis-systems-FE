@@ -8,13 +8,10 @@ const Symbols = () => {
     // const dispatch = useDispatch();
 
     const symbols = useSelector(getSymbolObject)
-    const symbolSel = useSelector(getSymbol)
-    const tweetSel = useSelector(getNewestTweet)
-    const tweetCountSel = useSelector(getNumberOfTweets)
     
-    const dataElements = symbols.map((_, i) => (
+    const dataElements = symbols.map((data, i) => (
         <li key={i}>
-            <SymbolCard  symbol={symbolSel} tweet={tweetSel} tweetCount={tweetCountSel}/>
+            <SymbolCard  symbol={data.symbol.symbol} tweet={data.messages[0].body} tweetCount={data.messages.length}/>
         </li>
     ))
 
