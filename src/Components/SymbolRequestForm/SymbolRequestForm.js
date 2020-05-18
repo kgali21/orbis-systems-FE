@@ -4,7 +4,7 @@ import { addSymbol } from '../../actions/symbolActions';
 
 const SymbolRequestForm = () => {
     const dispatch = useDispatch();
-    const [symbol, setSymbol] = useState([]);
+    const [symbol, setSymbol] = useState('');
 
 const handleSubmit = (e) => {
     e.preventDefault();
