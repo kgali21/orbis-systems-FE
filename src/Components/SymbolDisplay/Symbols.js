@@ -1,8 +1,7 @@
 import React from 'react';
 import SymbolCard from './SymbolCard';
 import { useSelector } from 'react-redux';
-import { getSymbolObject, getSymbol, getNewestTweet, getNumberOfTweets 
-} from '../../selectors/symbolsSelectors';
+import { getSymbolObject } from '../../selectors/symbolsSelectors';
 
 const Symbols = () => {
     // const dispatch = useDispatch();
