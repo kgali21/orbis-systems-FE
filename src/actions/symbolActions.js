@@ -12,7 +12,7 @@ export const addSymbol = (symbol) => dispatch => {
 };
 
 export const REMOVE_SYMBOL = 'REMOVE_SYMBOL';
-export const removeSymbol = index => ({
+export const removeSymbol = symbol => ({
     type: REMOVE_SYMBOL,
-    payload: index
+    payload: symbol
 })

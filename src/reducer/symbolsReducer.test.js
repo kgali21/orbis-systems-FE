@@ -34,7 +34,7 @@ describe('Symbol Reducer', () => {
             }
         ];
 
-        const action = removeSymbol(0)
+        const action = removeSymbol(state.symbol)
 
         const newState = reducer(state, action)
         expect(newState).toEqual([])

@@ -6,7 +6,7 @@ export default function reducer(state = [], action){
         case ADD_SYMBOL:
             return [...state, action.payload];
         case REMOVE_SYMBOL:
-            return state.filter((_, i) => i !== action.payload)
+            return state.filter(symbol => symbol === action.payload)
         default:
             return state;
     }
