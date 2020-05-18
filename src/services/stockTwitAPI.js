@@ -3,6 +3,6 @@
 // export const fetchSymbol = symbol => get(`/${symbol}.json`)
 
 export const fetchSymbol = symbol => {
-    return fetch(`${process.env.API_URL}/api/2/streams/symbol/${symbol}.json`)
-        .then(res => res)
+    return fetch(`http://localhost:7890/api/2/streams/symbol/${symbol}`)
+        .then(res => res.json())
 }

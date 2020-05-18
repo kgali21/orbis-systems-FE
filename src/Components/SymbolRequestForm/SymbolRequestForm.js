@@ -1,19 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 
-const SymbolRequestForm = ({  symbol, onSubmit, onChange }) => {
+const SymbolRequestForm = () => {
+    const dispatch = useDispatch();
+    const [symbol, setSymbol] = useState('');
+
+    
+
     return (
         <form onSubmit={onSubmit}>
-            <input type="text" value={symbol} onChange={onChange} maxLength='5' placeholder="Add or Remove a Symbol" />
+            <input type="text" value={symbol} onChange={({target}) => setSymbol(target.value)} maxLength='5' placeholder="Add or Remove a Symbol" />
             <button>Add/Remove</button>
         </form>
     )
 };
-
-SymbolRequestForm.propTypes = {
-    symbol: PropTypes.string.isRequired,
-    onSubmit: PropTypes.func.isRequired,
-    onChange: PropTypes.func.isRequired
-}
 
 export default SymbolRequestForm;
