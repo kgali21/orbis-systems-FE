@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import SymbolCard from './SymbolCard';
+import Messages from '../Messages/Messages'
 import { useSelector, useDispatch } from 'react-redux';
 import { getSymbolObject } from '../../selectors/symbolsSelectors';
 // import { updateSymbol } from '../../actions/symbolActions';
@@ -15,7 +16,8 @@ const Symbols = () => {
 
     const dataElements = symbolsItems.map((data, i) => (
         <li key={data.symbol.symbol} >
-            <SymbolCard symbol={data.symbol.symbol} tweet={data.messages.map(messageBody => messageBody.body).slice(0, 1)} tweetCount={data.messages.length}/>
+            <SymbolCard symbol={data.symbol.symbol} tweetCount={data.messages.length}/>
+            <Messages messages={data.messages.map(messageBody => messageBody.body)} />
         </li>
     )).slice(0, 5);
 
