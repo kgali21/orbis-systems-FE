@@ -1,0 +1,28 @@
+.Card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 23vw;
+    height: 45vh;
+    padding: 5%;
+    background-color: #89929e;
+    border-radius: 15%;
+    margin: 0 5em 1em 0;
+}
+
+.Card h1 {
+    color: rgb(35, 35, 218);
+}
+
+.Tweets {
+    font-size: .75em;
+    border: red solid 1px;
+    width: 24vw;
+    word-wrap: wrap;
+    color: rgb(66, 66, 255);
+}
+
+.Count{
+    color: rgb(0, 80, 0);
+}

@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getSymbolObject } from '../../selectors/symbolsSelectors';
 // import { updateSymbol } from '../../actions/symbolActions';
 // import useInterval from '@use-it/interval';
-import styles from './SymbolCard.css';
+import styles from './Symbols.module.css';
 
 const Symbols = () => {
     // const dispatch = useDispatch();
@@ -14,13 +14,13 @@ const Symbols = () => {
     // }, 10000)
 
     const dataElements = symbolsItems.map((data, i) => (
-        <li key={data.symbol.symbol} className={styles.Card} >
-            <SymbolCard symbol={data.symbol.symbol} tweet={data.messages[0].body} tweetCount={data.messages.length}/>
+        <li key={data.symbol.symbol} >
+            <SymbolCard symbol={data.symbol.symbol} tweet={data.messages.map(messageBody => messageBody.body).slice(0, 1)} tweetCount={data.messages.length}/>
         </li>
     )).slice(0, 5);
 
     return (
-    <ul>
+    <ul  className={styles.DataElements} >
         {dataElements}
     </ul>
     )

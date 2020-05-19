@@ -1,12 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './SymbolCard.css';
+import styles from './SymbolCard.module.css';
 
 const Symbol = ({ symbol, tweet, tweetCount}) => (
     <div className={styles.Card}>
-        <h1>{symbol}</h1>
-        <p>{tweet}</p>
-        <p>{tweetCount}</p>
+        <h1>${symbol}</h1>
+        <p>Tweet Count </p>
+        <p className={styles.Count}>{tweetCount}</p>
+        <ul className={styles.Tweets}>
+            <li>
+                {tweet}
+            </li>
+        </ul>
     </div>
 );
 
