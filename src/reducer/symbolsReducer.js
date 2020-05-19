@@ -11,7 +11,7 @@ export default function reducer(state = [], action){
                 return symbol;
             });
         case REMOVE_SYMBOL: 
-            return state.filter((_, symbol) => symbol.symbol !== action.payload.symbol);
+            return state.filter((symbol) => symbol.symbol.symbol.toLowerCase() !== action.payload.toLowerCase());
         default:
             return state;
     }

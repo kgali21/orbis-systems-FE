@@ -13,7 +13,7 @@ const Symbol = ({ symbol, tweet, tweetCount}) => (
 
 Symbol.propTypes = {
     symbol: PropTypes.string.isRequired,
-    tweet: PropTypes.array.isRequired,
+    tweet: PropTypes.object.isRequired,
     tweetCount: PropTypes.number.isRequired
 };
 
