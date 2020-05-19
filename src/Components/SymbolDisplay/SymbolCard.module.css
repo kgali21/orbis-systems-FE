@@ -15,12 +15,11 @@
     color: rgb(35, 35, 218);
 }
 
-.Tweets {
-    font-size: .75em;
-    border: red solid 1px;
-    width: 24vw;
-    word-wrap: wrap;
-    color: rgb(66, 66, 255);
+.MessageList {
+    width: 21vw;
+    height: 15vh;
+    overflow: auto;
+    background-color: white;
 }
 
 .Count{

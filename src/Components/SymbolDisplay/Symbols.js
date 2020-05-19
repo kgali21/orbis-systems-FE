@@ -16,8 +16,15 @@ const Symbols = () => {
 
     const dataElements = symbolsItems.map((data, i) => (
         <li key={data.symbol.symbol} >
-            <SymbolCard symbol={data.symbol.symbol} tweetCount={data.messages.length}/>
-            <Messages messages={data.messages.map(messageBody => messageBody.body)} />
+            <div>
+            <SymbolCard 
+                symbol={data.symbol.symbol} 
+                tweetCount={data.messages?.length}
+                tweet={
+                    <Messages messages={data.messages.map(messageBody => messageBody.body)} />
+                }
+            />
+            </div>
         </li>
     )).slice(0, 5);
 

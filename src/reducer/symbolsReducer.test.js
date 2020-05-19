@@ -51,7 +51,7 @@ describe('Symbol Reducer', () => {
 
     it('handles REMOVE_SYMBOL', () =>{
         const state = [
-            {
+            symbol: {
                 symbol: 'AAPL',
                 tweet: 'test test test',
                 tweetCount: 5

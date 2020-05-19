@@ -10,9 +10,9 @@ export default function reducer(state = [], action){
                 if(i === action.payload.index) return action.payload.symbol
                 return symbol;
             });
-        case REMOVE_SYMBOL:
-            return state.filter(symbol => symbol === action.payload)
+        case REMOVE_SYMBOL: 
+            return state.filter((_, symbol) => symbol.symbol !== action.payload.symbol);
         default:
             return state;
     }
-}
+};

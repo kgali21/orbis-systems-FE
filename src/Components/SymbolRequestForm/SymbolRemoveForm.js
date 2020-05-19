@@ -10,7 +10,6 @@ const SymbolRemoveForm = () => {
     const handleDelete = (e) => {
         e.preventDefault();
         dispatch(removeSymbol(symbol))
-        console.log(symbol)
     }
 
 
