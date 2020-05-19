@@ -21,7 +21,10 @@ const Symbols = () => {
                 symbol={data.symbol.symbol} 
                 tweetCount={data.messages?.length}
                 tweet={
-                    <Messages messages={data.messages.map(messageBody => messageBody.body)} />
+                    <Messages 
+                        messages={data.messages.map(messageBody => messageBody)}
+                        
+                        />
                 }
             />
             </div>
