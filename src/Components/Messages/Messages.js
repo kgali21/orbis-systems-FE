@@ -9,9 +9,9 @@ const Messages = ({ messages }) => {
     );
 
     return (
-        <ul>
-            {messageElements}
-        </ul>
+            <ul>
+                {messageElements}
+            </ul>
     );
 };
 

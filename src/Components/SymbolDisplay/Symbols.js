@@ -19,12 +19,11 @@ const Symbols = () => {
             <div>
             <SymbolCard 
                 symbol={data.symbol.symbol} 
-                tweetCount={data.messages?.length}
+                tweetCount={data.messages.length}
                 tweet={
                     <Messages 
                         messages={data.messages.map(messageBody => messageBody)}
-                        
-                        />
+                    />
                 }
             />
             </div>

@@ -8,12 +8,12 @@ import Header from '../Header/Header';
 const Home = () => (
     <div className={styles.App}>
         <Header />
-    <div className={styles.Form}>
+    <span className={styles.Form}>
         <p>Add a stock symbol to start tracking</p>
         <SymbolRequestForm />
         <p>Remove a stock symbol</p>
         <SymbolRemoveForm />
-    </div>
+    </span>
         <Symbols />
     </div>
 )

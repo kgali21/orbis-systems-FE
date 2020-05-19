@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import styles from './SymbolCard.module.css';
 
 const Symbol = ({ symbol, tweet, tweetCount}) => (
-    <div className={styles.Card}>
+    <span className={styles.Card}>
         <h1>${symbol}</h1>
         <p>Tweet Count </p>
         <p className={styles.Count}>{tweetCount}</p>
         <div className={styles.MessageList}>{tweet}</div>
-    </div>
+    </span>
 );
 
 Symbol.propTypes = {

@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import styles from './Message.module.css';
 
 const Message = ({ tweets, timeStamp }) => (
-    <div className={styles.Tweets}>
-        <p>{tweets}</p>
-        <p className={styles.TimeStamp}>{timeStamp}</p>
-    </div>
+        <span className={styles.Tweets}>
+            <p>{tweets}</p>
+            <p className={styles.TimeStamp}>{timeStamp}</p>
+        </span>
 )
 
 Message.propTypes = {

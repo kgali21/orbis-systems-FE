@@ -16,7 +16,7 @@ const SymbolRequestForm = () => {
     <div>
         <form onSubmit={handleSubmit} className={styles.RequestForm}>
             <p>$</p><input type="text" value={symbol} onChange={({target}) => setSymbol(target.value)} maxLength='5' placeholder="Add a Symbol" />
-            <button>Add Symbol</button>
+            <button>Add</button>
         </form>
     </div>
     )

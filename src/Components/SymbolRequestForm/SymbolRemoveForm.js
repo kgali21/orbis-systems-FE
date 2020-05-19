@@ -14,12 +14,12 @@ const SymbolRemoveForm = () => {
 
 
     return (  
-    <div>
+    <span>
         <form onSubmit={handleDelete}  className={styles.RemoveForm}>
             <p>$</p><input type="text" value={symbol} onChange={({target}) => setSymbol(target.value)} maxLength='5' placeholder="Remove a symbol" />
             <button>Remove</button>
         </form>
-    </div>
+    </span>
     )
 };
 

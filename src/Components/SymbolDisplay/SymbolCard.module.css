@@ -5,6 +5,7 @@
     align-items: center;
     width: 23vw;
     height: 45vh;
+    min-width: 300px;
     padding: 5%;
     background-color: #89929e;
     border-radius: 15%;
@@ -21,8 +22,26 @@
     height: 15vh;
     overflow: auto;
     background-color: white;
+    min-width: 250px;
 }
 
 .Count{
     color: rgb(0, 80, 0);
+}
+
+@media only screen and (max-width: 600px){
+    .Card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 20vw;
+        height: 40vh;
+        min-width: 300px;
+        padding: 5%;
+        background-color: #89929e;
+        border-radius: 15%;
+        margin: 0 5em 1em 0;
+        box-shadow: .5em .5em 1em black;
+    }
 }
