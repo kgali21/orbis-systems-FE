@@ -9,6 +9,7 @@
     background-color: #89929e;
     border-radius: 15%;
     margin: 0 5em 1em 0;
+    box-shadow: .5em .5em 1em black;
 }
 
 .Card h1 {

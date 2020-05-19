@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addSymbol } from '../../actions/symbolActions';
+import styles from './RequestForm.module.css';
 
 const SymbolRequestForm = () => {
     const dispatch = useDispatch();
@@ -13,8 +14,8 @@ const SymbolRequestForm = () => {
 
     return (  
     <div>
-        <form onSubmit={handleSubmit}>
-            <input type="text" value={symbol} onChange={({target}) => setSymbol(target.value)} maxLength='5' placeholder="Add a Symbol" />
+        <form onSubmit={handleSubmit} className={styles.RequestForm}>
+            <p>$</p><input type="text" value={symbol} onChange={({target}) => setSymbol(target.value)} maxLength='5' placeholder="Add a Symbol" />
             <button>Add Symbol</button>
         </form>
     </div>

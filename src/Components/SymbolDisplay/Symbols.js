@@ -15,7 +15,7 @@ const Symbols = () => {
     // }, 10000)
 
     const dataElements = symbolsItems.map((data, i) => (
-        <li key={data.symbol.symbol} >
+        <li key={data.symbol.symbol}>
             <div>
             <SymbolCard 
                 symbol={data.symbol.symbol} 
