@@ -10,7 +10,7 @@ describe('Symbol Selectors', () => {
             ]
         }
 
-        const symbols = getSymbolObject(state)
+        const symbols = getSymbolObject(state.symbols)
         expect(symbols).toEqual([
             {symbol: 'NKE', tweet: 'test test test', tweetsCount: 4},
             {symbol: 'AAPL', tweet: 'test test test', tweetsCount: 5}
