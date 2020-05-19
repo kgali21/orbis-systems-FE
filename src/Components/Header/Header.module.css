@@ -1,4 +1,11 @@
 .Logo {
     width: 20vw;
+    min-width: 200px;
     height: auto;
+}
+
+@media only screen and (max-width: 600px){
+    .Logo {
+        margin: 0 2em 0 0
+    }
 }
