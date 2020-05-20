@@ -6,10 +6,7 @@ export default function reducer(state = [], action){
         case ADD_SYMBOL:
             return [...state, action.payload];
         case UPDATE_SYMBOL:
-            return state.map((symbol, i) => {
-                if(i === action.payload.index) return action.payload.symbol
-                return symbol;
-            });
+            return action.payload
         case REMOVE_SYMBOL: 
             return state.filter((symbol) => symbol.symbol.symbol.toLowerCase() !== action.payload.toLowerCase());
         default:

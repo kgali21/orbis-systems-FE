@@ -12,16 +12,21 @@ export const addSymbol = (symbol) => dispatch => {
 };
 
 export const UPDATE_SYMBOL = 'UPDATE_SYMBOL';
-export const updateSymbol = (index, symbol) => ({
-    type: UPDATE_SYMBOL,
-    payload: {
-        index,
-        symbol
-    }
-});
+export const updateSymbol = (symbols) => dispatch => {
+    return Promise.all(symbols.map(symbol => fetchSymbol(symbol.symbol.symbol)))
+        .then(updatedSymbol => {
+            dispatch({
+                type: UPDATE_SYMBOL,
+                payload: updatedSymbol
+            })
+        })
+}
 
+    
+    
 export const REMOVE_SYMBOL = 'REMOVE_SYMBOL';
 export const removeSymbol = symbol => ({
     type: REMOVE_SYMBOL,
     payload: symbol
 })
+    

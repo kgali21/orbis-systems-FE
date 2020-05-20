@@ -1,20 +1,22 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import SymbolCard from './SymbolCard';
 import Messages from '../Messages/Messages'
 import { useSelector, useDispatch } from 'react-redux';
 import { getSymbolObject } from '../../selectors/symbolsSelectors';
-// import { updateSymbol } from '../../actions/symbolActions';
-// import useInterval from '@use-it/interval';
+import { updateSymbol } from '../../actions/symbolActions';
+import useInterval from '@use-it/interval';
 import styles from './Symbols.module.css';
 
 const Symbols = () => {
-    // const dispatch = useDispatch();
-    const symbolsItems = useSelector(getSymbolObject);
-    // useInterval(() => {
-    //     dispatch(updateSymbol(symbolsItems))
-    // }, 10000)
+    const dispatch = useDispatch();
+    let symbolsItems = useSelector(getSymbolObject);
+    console.log(symbolsItems, 'pre-interval')
+    useInterval(() => {
+        dispatch(updateSymbol(symbolsItems))
+        console.log(symbolsItems, 'post-interval')
+    }, 120000)
 
-    const dataElements = symbolsItems.map((data, i) => (
+    const dataElements = symbolsItems.map((data) => (
         <li key={data.symbol.symbol}>
             <div>
             <SymbolCard 
