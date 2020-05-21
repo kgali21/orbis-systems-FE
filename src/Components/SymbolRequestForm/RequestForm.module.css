@@ -1,0 +1,10 @@
+.RequestForm {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 25vw;
+}
+
+.RequestForm button {
+    border-radius: 5%;
+}
