@@ -26,24 +26,35 @@ describe('Symbol Reducer', () => {
     });
 
     it('handles UPDATE_SYMBOL', () => {
-        const state = [{
-            symbol: 'AAPL',
-            tweet: 'test test test',
-            tweetCount: 5
-        }];
+    //     const state = [
+    //         {
+    //         symbol: 'AAPL',
+    //         tweet: 'test test test',
+    //         tweetCount: 5
+    //     }
+    // ];
+        const state = [];
+        // const action = updateSymbol(0, {
+        //     symbol: 'AAPL',
+        //     tweet: 'test test test',
+        //     tweetCount: 5
+        // });
 
-        const action = updateSymbol(0, {
-            symbol: 'AAPL',
-            tweet: 'testing',
-            tweetCount: 5
-        });
+        const action = {
+            type: 'UPDATE_SYMBOL',
+            payload:  [{
+                symbol: 'AAPL',
+                tweet: 'test test test',
+                tweetCount: 5
+            }]
+        }         
 
         const newState = reducer(state, action);
 
         expect(newState).toEqual([
             {
                 symbol: 'AAPL',
-                tweet: 'testing',
+                tweet: 'test test test',
                 tweetCount: 5
             }
         ]);
@@ -51,16 +62,18 @@ describe('Symbol Reducer', () => {
 
     it('handles REMOVE_SYMBOL', () =>{
         const state = [
+           {
             symbol: {
                 symbol: 'AAPL',
                 tweet: 'test test test',
                 tweetCount: 5
             }
+        }
         ];
 
-        const action = removeSymbol(state.symbol)
+        const action = removeSymbol(state)
 
-        const newState = reducer(state, action)
+        const newState = reducer(state.symbol, action)
         expect(newState).toEqual([])
     });
 });
