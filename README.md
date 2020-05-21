@@ -24,7 +24,7 @@ useInterval library for automatic fetch calls for auto updates
     Displayed a matching tweets in a scroll-able container so that the amount of tweets wont affect the page itself.  
 
 ● When a new tweet comes in, it should automatically be added without having to refresh the page.  
-    Once every 2 minutes a fetch is called through, an update action which then returns a new fetch of the data that exists in Redux state using a selector and then sending through a reducer. Used useInterval to set the timer, which allows me to re-render the page or entire component.  
+    Once every 2 minutes a fetch is called through, an update action which then returns a new fetch of the data that exists in Redux state using a selector and then sending through a reducer. Used useInterval to set the timer, which allows me to re-render the page or entire component. I went with 2 minutes auto refresh because it allows me to not get rated limited per hour, and makes 150 calls per hour.  
 
 ● The user should be able to later add/remove symbols as well. If a user deletes a symbol,the matching tweets should also disappear.  
     The user can add and remove a symbol by typing the symbol into a form text box. I decided to remove the entire card, mainly because if they want to delete a symbol and the associated messages, they probably wont need either separately.  
@@ -43,8 +43,8 @@ useInterval library for automatic fetch calls for auto updates
 
 ### Stretch Goals
     Attempted:
-        - Not allow duplicate Symbols; tried to do this through the ADD_SYMBOL reducer with various array methods but couldn't quite get it to work.
-        - Dynamically set the delay on useInterval based on the number of cards; tried to do this with a conditional, but because of UseInterval had trouble not going against the Rules of Hooks.
+        - Not allow duplicate Symbols; I couldn't get it to work because the various array methods would not initially remove that duplicated Symbol for the state of the array in the redux store. I could get it to remove all the symbols in the array but not a single one based on the symbol name
+        - Dynamically set the delay on useInterval based on the number of cards; tried to do this with a conditional, but because of UseInterval, I had trouble not going against the Rules of Hooks.
     Non-attempted:
         - handle 404s on the front-end
 
