@@ -1,16 +1,16 @@
 ### Installation Instructions
-Github Front-end: https://github.com/kgali21/orbis-systems-FE
-Github Back-end: https://github.com/kgali21/orbis-systems-be
-Npm i will install everything you need for both sides!
+Github Front-end: https://github.com/kgali21/orbis-systems-FE  
+Github Back-end: https://github.com/kgali21/orbis-systems-be  
+Npm i will install everything you need for both sides!  
 
-Deployed Front-end:
-Deployed Back-end:
+Deployed Front-end:  
+Deployed Back-end:  
 
 ### Technologies Used
 
-React for front-end framework
-Redux for global state management
-useInterval library for automatic fetch calls for auto updates
+React for front-end framework  
+Redux for global state management  
+useInterval library for automatic fetch calls for auto updates  
 
 ### Requirements
 
