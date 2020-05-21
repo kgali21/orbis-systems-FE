@@ -13,6 +13,8 @@ const Messages = ({ messages }) => {
                 {messageElements}
             </ul>
     );
+
+
 };
 
 export default Messages;
