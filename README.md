@@ -4,7 +4,7 @@ Github Back-end: https://github.com/kgali21/orbis-systems-be
 Npm i will install everything you need for both sides!  
 
 Deployed Front-end:  
-Deployed Back-end:  
+Deployed Back-end: https://orbis-backend-challenge.herokuapp.com
 
 ### Technologies Used
 
@@ -43,7 +43,6 @@ useInterval library for automatic fetch calls for auto updates
 
 ### Stretch Goals
     Attempted:
-        - Not allow duplicate Symbols; I couldn't get it to work because the various array methods would not initially remove that duplicated Symbol for the state of the array in the redux store. I could get it to remove all the symbols in the array but not a single one based on the symbol name
         - Dynamically set the delay on useInterval based on the number of cards; tried to do this with a conditional, but because of UseInterval, I had trouble not going against the Rules of Hooks.
     Non-attempted:
         - handle 404s on the front-end
