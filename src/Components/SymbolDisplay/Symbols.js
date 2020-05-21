@@ -10,12 +10,12 @@ import styles from './Symbols.module.css';
 const Symbols = () => {
     const dispatch = useDispatch();
     let symbolsItems = useSelector(getSymbolObject);
-    console.log(symbolsItems, 'pre-interval')
+
     useInterval(() => {
         dispatch(updateSymbol(symbolsItems))
-        console.log(symbolsItems, 'post-interval')
-    }, 120000)
-
+        console.log(symbolsItems, 'symbolItems')
+    }, 60000 * 2);
+  
     const dataElements = symbolsItems.map((data) => (
         <li key={data.symbol.symbol}>
             <div>
