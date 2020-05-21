@@ -8,7 +8,7 @@ describe('Symbol Selectors', () => {
                 {symbol: 'NKE', tweet: 'test test test', tweetsCount: 4},
                 {symbol: 'AAPL', tweet: 'test test test', tweetsCount: 5}
             ]
-        }
+        };
 
         const symbols = getSymbolObject(state.symbols)
         expect(symbols).toEqual([

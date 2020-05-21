@@ -13,7 +13,6 @@ const Symbols = () => {
 
     useInterval(() => {
         dispatch(updateSymbol(symbolsItems))
-        console.log(symbolsItems, 'symbolItems')
     }, 60000 * 2);
   
     const dataElements = symbolsItems.map((data) => (

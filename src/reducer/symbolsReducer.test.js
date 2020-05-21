@@ -1,7 +1,6 @@
 import { removeSymbol, updateSymbol } from '../actions/symbolActions';
 import reducer from './symbolsReducer';
 
-
 describe('Symbol Reducer', () => {
     it('handle ADD_SYMBOL', () => {
         const state = [];
@@ -26,19 +25,7 @@ describe('Symbol Reducer', () => {
     });
 
     it('handles UPDATE_SYMBOL', () => {
-    //     const state = [
-    //         {
-    //         symbol: 'AAPL',
-    //         tweet: 'test test test',
-    //         tweetCount: 5
-    //     }
-    // ];
         const state = [];
-        // const action = updateSymbol(0, {
-        //     symbol: 'AAPL',
-        //     tweet: 'test test test',
-        //     tweetCount: 5
-        // });
 
         const action = {
             type: 'UPDATE_SYMBOL',

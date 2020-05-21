@@ -22,8 +22,6 @@ export const updateSymbol = (symbols) => dispatch => {
         })
 }
 
-    
-    
 export const REMOVE_SYMBOL = 'REMOVE_SYMBOL';
 export const removeSymbol = symbol => ({
     type: REMOVE_SYMBOL,
