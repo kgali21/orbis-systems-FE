@@ -44,7 +44,7 @@ useInterval library for automatic fetch calls for auto updates
 ### Stretch Goals
     Attempted:
         - Not allow duplicate Symbols; tried to do this through the ADD_SYMBOL reducer with various array methods but couldn't quite get it to work.
-        - Dynamically set the delay on useInterval based on the number of cards; tried to do this with a conditional, but because of UseInterval had trouble not going against the Rule of Hooks.
+        - Dynamically set the delay on useInterval based on the number of cards; tried to do this with a conditional, but because of UseInterval had trouble not going against the Rules of Hooks.
     Non-attempted:
         - handle 404s on the front-end
 
